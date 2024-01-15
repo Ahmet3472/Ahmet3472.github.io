@@ -1,0 +1,50 @@
+/* Basis-CSS für die Formatierung des Quiz */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff; /* Hintergrundfarbe auf Weiß setzen */
+    margin: 0;
+    padding: 0;
+}
+
+#center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#questionbox {
+    background-color: #000; /* Hintergrundfarbe auf Schwarz setzen */
+    color: #fff; /* Textfarbe auf Weiß setzen */
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left; /* Linksbündige Ausrichtung */
+    position: relative; /* Position relativ setzen */
+}
+
+#score {
+    position: absolute;
+    top: -20px; /* Negative obere Marge, um den Score über das Fragefeld zu verschieben */left: -0px; /* Negative linke Marge, um den Score über das Fragefeld zu verschieben */
+    margin: 0;
+    color: #000; /* Schriftfarbe auf Schwarz setzen */
+}
+
+button {
+    background-color: #000; /* Hintergrundfarbe auf Schwarz setzen */
+    color: #fff; /* Textfarbe auf Weiß setzen */
+    border: 2px solid #fff; /* Randfarbe auf Weiß setzen */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red; /* Ändern der Hintergrundfarbe beim Hovern */
+    color: #000;
+}
