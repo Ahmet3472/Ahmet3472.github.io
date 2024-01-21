@@ -3,7 +3,7 @@ let points = 0;
 
 // Funktion zum Abrufen von zufälligen Fragen von der Open Trivia Database (OTDB)
 async function fetchRandomQuestions() {
-    const response = await fetch("https://opentdb.com/api.php?amount=20&type=multiple");
+    const response = await fetch("https://opentdb.com/api.php?amount=20&difficulty=easy&type=multiple");
     const data = await response.json();
 
     // Verarbeite die API-Antwort und erstelle das Format für die Quizfragen
