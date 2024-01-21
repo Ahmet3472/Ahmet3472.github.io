@@ -45,6 +45,7 @@ button {
 }
 
 button:hover {
-    background-color: red; /* Ändern der Hintergrundfarbe beim Hovern */
-    color: #000;
+    background-color: lightblue; /* Ändern der Hintergrundfarbe beim Hovern */
+    color: white;
+    transition: 0.25s;
 }

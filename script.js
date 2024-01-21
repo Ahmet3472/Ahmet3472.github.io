@@ -50,17 +50,53 @@ function show() {
 
 // Funktion zum Überprüfen der Antwort
 function check(answer) {
+
     var P = document.getElementById("points");
+
+    var a = document.getElementById("A");
+    var b = document.getElementById("B");
+    var c = document.getElementById("C");
+    var d = document.getElementById("D");
+
+    a.style.backgroundColor = 'black'; 
+    b.style.backgroundColor = 'black'; 
+    c.style.backgroundColor = 'black'; 
+    d.style.backgroundColor = 'black'; 
 
     if (parseInt(answer) === quizQuestions[Q_nr].correctAnswer) {
         // Richtig beantwortet
         points += 10;
     } else {
+
         // Falsch beantwortet
         points -= 20;
-        if(points < 0){
-            points = 0;
+
+        switch(answer){
+            case 1: a.style.backgroundColor = 'red'; break;
+            case 2: b.style.backgroundColor = 'red'; break;
+            case 3: c.style.backgroundColor = 'red'; break;
+            case 4: d.style.backgroundColor = 'red'; break;
         }
+
+        switch(quizQuestions[Q_nr].correctAnswer){
+            case 1: a.style.backgroundColor = 'green'; break;
+            case 2: b.style.backgroundColor = 'green'; break;
+            case 3: c.style.backgroundColor = 'green'; break;
+            case 4: d.style.backgroundColor = 'green'; break;
+        }
+        
+
+        var click = false;
+        while(!click){
+            document.addEventListener('click', click = true);
+            console.log("kein klick");
+        }
+
+        a.style.backgroundColor = 'black'; 
+        b.style.backgroundColor = 'black'; 
+        c.style.backgroundColor = 'black'; 
+        d.style.backgroundColor = 'black'; 
+
     }
 
     P.innerHTML = "<span>" + points + "</span>";
